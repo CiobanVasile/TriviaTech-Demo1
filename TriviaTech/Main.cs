@@ -1,39 +1,12 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
 using TriviaTech.Components.domain;
 using TriviaTech.Components.repository;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Threading.Tasks;
-var builder = WebApplication.CreateBuilder(args);
 
-/*// Add services to the container, including configuration for DbContext.
-builder.Services.AddDbContext<YourAppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+namespace TriviaTech;
 
-// Add repositories to DI
-builder.Services.AddScoped<IRepository<User>, UserRepository>();
-builder.Services.AddScoped<IRepository<Game>, GameRepository>();
-
-// Register controllers and other services
-builder.Services.AddControllers();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();*/
-
-
-partial class Program
+public class Main
 {
-    static async Task Main(string[] args)
+      static async Task Mai2n(string[] args)
     {
         // Setup a Host for Dependency Injection
         var host = Host.CreateDefaultBuilder(args)
